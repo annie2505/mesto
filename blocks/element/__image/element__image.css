@@ -1,0 +1,7 @@
+.element__image {
+  background-image: url(../../../images/ladoga.jpg);
+  height: 282px;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+}

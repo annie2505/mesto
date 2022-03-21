@@ -1,0 +1,15 @@
+.element__button {
+  background-image: url(../../../images/like-button.svg);
+  height: 19px;
+  width: 22px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
+.element__button:active {
+  background-image: url(../../../images/like-button-active.svg);
+}

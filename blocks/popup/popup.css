@@ -1,0 +1,28 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 195px 425px;
+}
+
+@media screen and (max-width: 1230px) {
+  .popup {
+    padding: 195px 300px;
+}
+}
+
+@media screen and (max-width: 900px) {
+  .popup {
+    padding: 123px 150px;
+}
+}
+
+@media screen and (max-width: 600px) {
+  .popup {
+    padding: 123px 19px;
+}
+}
