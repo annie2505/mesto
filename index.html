@@ -22,48 +22,50 @@
           </div>
           <p class="profile__job">Исследователь океана</p>
         </div>
-        <button class="profile__add-button link" type="button" aria-label="Кнопка добавления"></button>
+        <button class="profile__add-button link" type="button" aria-label="Кнопка добавления">
+          <img src="./images/add-button.svg" alt="Добавить карточку" class="profile__add-button-image"></img>
+        </button>
       </section>
 
       <section class="elements" aria-label="Интересные места">
         <ul class="elements__list">
           <li class="element">
-            <div class="element__image"></div>
+            <div class="element__image" style="background-image: url(./images/ladoga.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Ладога</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
+              <button class="element__button" type="button" aria-label="Кнопка-лайк"></button>
             </div>
           </li>
           <li class="element">
-            <div class="element__image element__image_oreshek"></div>
+            <div class="element__image" style="background-image: url(./images/oreshek.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Крепость Орешек</h2>
               <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
             </div>
           </li>
           <li class="element">
-            <div class="element__image element__image_sortavala"></div>
+            <div class="element__image" style="background-image: url(./images/sortavala.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Сортавала</h2>
               <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
             </div>
           </li>
           <li class="element">
-            <div class="element__image element__image_ruskeala"></div>
+            <div class="element__image" style="background-image: url(./images/ruskeala.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Рускеала</h2>
               <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
             </div>
           </li>
           <li class="element">
-            <div class="element__image element__image_valaam"></div>
+            <div class="element__image" style="background-image: url(./images/valaam.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Валаам</h2>
               <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
             </div>
           </li>
           <li class="element">
-            <div class="element__image element__image_kizhi"></div>
+            <div class="element__image" style="background-image: url(./images/kizhi.jpg)"></div>
             <div class="element__group">
               <h2 class="element__name">Кижи</h2>
               <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
@@ -81,9 +83,9 @@
       <button class="popup__close-button link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form" method="get" name="form">
-        <input type="text" name="name" class="popup__input popup__input_form_name" placeholder="Имя">
-        <input type="text" name="job" class="popup__input popup__input_form_job" placeholder="О себе">
-        <button class="popup__submit-button link" type="submit">Сохранить</button>
+        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя">
+        <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе">
+        <button class="popup__submit-button" type="submit">Сохранить</button>
       </form>
     </div>
   </div>

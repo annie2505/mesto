@@ -8,8 +8,17 @@
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 5px;
+  transition: opacity .3s;
+  cursor: pointer;
 }
+
+.element__button:hover {
+  opacity: 0.5;
+}
+
 
 .element__button:active {
   background-image: url(../../../images/like-button-active.svg);
 }
+
+

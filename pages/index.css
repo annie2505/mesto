@@ -14,15 +14,11 @@
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__job/profile__job.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
+@import url(../blocks/profile/__add-button-image/profile__add-button-image.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__list/elements__list.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__image/_oreshek/element__image_oreshek.css);
-@import url(../blocks/element/__image/_sortavala/element__image_sortavala.css);
-@import url(../blocks/element/__image/_ruskeala/element__image_ruskeala.css);
-@import url(../blocks/element/__image/_valaam/element__image_valaam.css);
-@import url(../blocks/element/__image/_kizhi/element__image_kizhi.css);
 @import url(../blocks/element/__group/element__group.css);
 @import url(../blocks/element/__name/element__name.css);
 @import url(../blocks/element/__button/element__button.css);
@@ -34,5 +30,7 @@
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__form/popup__form.css);
 @import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_type/_job/popup__input_type_job.css);
+@import url(../blocks/popup/__input/_type/_name/popup__input_type_name.css);
 @import url(../blocks/popup/__submit-button/popup__submit-button.css);
 @import url(../blocks/popup/_opened/popup_opened.css);

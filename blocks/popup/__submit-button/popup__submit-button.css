@@ -13,7 +13,14 @@
   color: #fff;
   margin-top: 18px;
   align-self: center;
+  transition: opacity .3s;
+  cursor: pointer;
 }
+
+.popup__submit-button:hover {
+  opacity: 0.8;
+}
+
 
 @media screen and (max-width: 600px) {
   .popup__submit-button {
