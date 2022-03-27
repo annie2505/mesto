@@ -6,24 +6,19 @@
   line-height: 1.14;
   color: #fff;
   margin: 0;
-  padding-right: 18px;
+  padding-right: 19px;
   max-width: 293px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 500px) {
   .profile__name {
-    font-size: 35px;
-    line-height: 1.22;
+    max-width: 189px;
     padding-right: 10px;
+    line-height: 1.22;
+    font-size: 27px;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .profile__name {
-    font-size: 27px;
-    max-width: 254px;
-  }
-}
