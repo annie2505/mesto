@@ -27,48 +27,7 @@
 
       <section class="elements" aria-label="Интересные места">
         <ul class="elements__list">
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/ladoga.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Ладога</h2>
-              <button class="element__button" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/oreshek.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Крепость Орешек</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/sortavala.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Сортавала</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/ruskeala.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Рускеала</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/valaam.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Валаам</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image" style="background-image: url(./images/kizhi.jpg)"></div>
-            <div class="element__group">
-              <h2 class="element__name">Кижи</h2>
-              <button class="element__button link" type="button" aria-label="Кнопка-лайк"></button>
-            </div>
-          </li>
+
         </ul>
       </section>
       <footer class="footer">
@@ -76,17 +35,46 @@
       </footer>
     </main>
   </div>
-  <div class="popup">
+  <div class="popup popup_edit">
     <div class="popup__container">
-      <button class="popup__close-button link" type="button" aria-label="Кнопка закрытия"></button>
+      <button class="popup__close-button popup__close-button_edit link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form" method="get" name="form">
+      <form class="popup__form popup__form_edit" method="get" name="form">
         <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя">
         <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе">
-        <button class="popup__submit-button" type="submit">Сохранить</button>
+        <button class="popup__submit-button popup__submit-button_edit" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
+  <div class="popup popup_add">
+    <div class="popup__container">
+      <button class="popup__close-button popup__close-button_add link" type="button" aria-label="Кнопка закрытия"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form popup__form_add" method="get" name="form">
+        <input type="text" name="place" class="popup__input popup__input_type_place" placeholder="Название">
+        <input type="text" name="link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
+        <button class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_image">
+    <div class="popup__container">
+      <button class="popup__close-button popup__close-button_image link" type="button" aria-label="Кнопка закрытия"></button>
+    </div>
+  </div>
+  <template class="element-template">
+    <li class="element">
+      <div class="element__image" style="background-image: url(./images/ladoga.jpg)">
+      <button class="element__trash-button" type="button" aria-label="Кнопка удаления"></button>
+      </div>
+
+      <div class="element__group">
+        <h2 class="element__name">Ладога</h2>
+        <button class="element__button" type="button" aria-label="Кнопка-лайк"></button>
+
+      </div>
+    </li>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
