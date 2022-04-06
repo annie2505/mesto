@@ -35,43 +35,40 @@
       </footer>
     </main>
   </div>
-  <div class="popup popup_edit">
+  <div class="popup popup_type_edit">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-button_edit link" type="button" aria-label="Кнопка закрытия"></button>
+      <button class="popup__close-button popup__close-button_type_edit link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form popup__form_edit" method="get" name="form">
+      <form class="popup__form popup__form_type_edit" method="get" name="form">
         <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя">
         <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе">
         <button class="popup__submit-button popup__submit-button_edit" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
-  <div class="popup popup_add">
+  <div class="popup popup_type_add">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-button_add link" type="button" aria-label="Кнопка закрытия"></button>
+      <button class="popup__close-button popup__close-button_type_add link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form popup__form_add" method="get" name="form">
+      <form class="popup__form popup__form_type_add" method="get" name="form">
         <input type="text" name="place" class="popup__input popup__input_type_place" placeholder="Название">
         <input type="text" name="link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
         <button class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
       </form>
     </div>
   </div>
-  <div class="popup popup_image">
+  <div class="popup popup_type_image">
     <div class="popup__container">
-      <button class="popup__close-button popup__close-button_image link" type="button" aria-label="Кнопка закрытия"></button>
+      <button class="popup__close-button popup__close-button_type_image link" type="button" aria-label="Кнопка закрытия"></button>
     </div>
   </div>
   <template class="element-template">
     <li class="element">
-      <div class="element__image" style="background-image: url(./images/ladoga.jpg)">
-      <button class="element__trash-button" type="button" aria-label="Кнопка удаления"></button>
-      </div>
-
+      <div class="element__image" style="background-image: url(./images/ladoga.jpg)"></div>
+      <button class="element__trash-button link" type="button" aria-label="Кнопка удаления"></button>
       <div class="element__group">
         <h2 class="element__name">Ладога</h2>
-        <button class="element__button" type="button" aria-label="Кнопка-лайк"></button>
-
+        <button class="element__like-button" type="button" aria-label="Кнопка-лайк"></button>
       </div>
     </li>
   </template>

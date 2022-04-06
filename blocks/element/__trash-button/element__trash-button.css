@@ -10,10 +10,4 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  transition: opacity .3s;
-  cursor: pointer;
-}
-
-.element__trash-button:hover {
-  opacity: 0.6;
 }
