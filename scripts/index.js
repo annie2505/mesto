@@ -28,7 +28,6 @@ const initialCards = [
 
 const cardsContainer = document.querySelector('.elements__list');
 
-
 // popups
 const popup = document.querySelector('.popup');
 const popupEdit = document.querySelector('.popup_type_edit');
