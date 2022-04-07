@@ -35,6 +35,7 @@
       </footer>
     </main>
   </div>
+
   <div class="popup popup_type_edit">
     <div class="popup__container">
       <button class="popup__close-button popup__close-button_type_edit link" type="button" aria-label="Кнопка закрытия"></button>
@@ -58,16 +59,21 @@
     </div>
   </div>
   <div class="popup popup_type_image">
-    <div class="popup__container">
+    <div class="popup__image-container">
       <button class="popup__close-button popup__close-button_type_image link" type="button" aria-label="Кнопка закрытия"></button>
+      <figure class="popup__figure">
+        <img src="#" alt="#" class="popup__zoom-image">
+        <figcaption class="popup__image-caption"></figcaption>
+      </figure>
     </div>
   </div>
+
   <template class="element-template">
     <li class="element">
-      <div class="element__image" style="background-image: url(./images/ladoga.jpg)"></div>
+      <img src="#" alt="#" class="element__image">
       <button class="element__trash-button link" type="button" aria-label="Кнопка удаления"></button>
       <div class="element__group">
-        <h2 class="element__name">Ладога</h2>
+        <h2 class="element__name"></h2>
         <button class="element__like-button" type="button" aria-label="Кнопка-лайк"></button>
       </div>
     </li>
