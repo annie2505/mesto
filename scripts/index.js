@@ -29,7 +29,6 @@ const initialCards = [
 const cardsContainer = document.querySelector('.elements__list');
 
 // popups
-const popup = document.querySelector('.popup');
 const popupEdit = document.querySelector('.popup_type_edit');
 const popupAdd = document.querySelector('.popup_type_add');
 const popupImage = document.querySelector('.popup_type_image');
@@ -48,14 +47,12 @@ const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
 
 // popup form data
-const forms = document.querySelectorAll('.popup__form');
 const popupEditForm = popupEdit.querySelector('.popup__form_type_edit');
 const popupAddForm = popupAdd.querySelector('.popup__form_type_add');
 const nameInput = popupEditForm.querySelector('.popup__input_type_name');
 const jobInput = popupEditForm.querySelector('.popup__input_type_job');
 const placeInput = popupAddForm.querySelector('.popup__input_type_place');
 const placeLinkInput = popupAddForm.querySelector('.popup__input_type_link');
-
 
 
 //functions
@@ -67,20 +64,6 @@ const openPopup = function(popup) {
 const closePopup = function(popup) {
   popup.classList.remove('popup_opened');
 };
-
-// reset form data
-const resetFormValue = function() {
-  forms.forEach(function(item) {
-    item.reset();
-  });
-};
-
-// close any popup by clicking on empty field
-// const closePopupEmptyField = popup.addEventListener('click', function(evt) {
-//   if (evt.target === evt.currentTarget) {
-//     closePopup(popup);
-//   }
-// });
 
 // edit popup actions
 function submitEditPopupForm(evt) {
@@ -169,7 +152,7 @@ function submitAddPopupForm (evt) {
   evt.preventDefault();
   renderCard({name: placeInput.value, link: placeLinkInput.value}, cardsContainer);
   closePopup(popupAdd);
-  resetFormValue();
+  popupAddForm.reset();
 }
 
 popupAddForm.addEventListener('submit', submitAddPopupForm);
