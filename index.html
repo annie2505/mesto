@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Место.Россия</title>
-    <link rel="stylesheet" href="./pages/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Место.Россия</title>
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
   <div class="page-container">
@@ -26,9 +26,7 @@
       </section>
 
       <section class="elements" aria-label="Интересные места">
-        <ul class="elements__list">
-
-        </ul>
+        <ul class="elements__list"></ul>
       </section>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
@@ -40,9 +38,31 @@
     <div class="popup__container">
       <button class="popup__close-button popup__close-button_type_edit link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form popup__form_type_edit" method="get" name="form">
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя">
-        <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе">
+      <form class="popup__form popup__form_type_edit" name="user" novalidate>
+        <label class="popup__input-container">
+          <input
+          type="text"
+          name="name"
+          id="user-name"
+          class="popup__input popup__input_type_name"
+          placeholder="Имя"
+          minlength="2"
+          maxlength="40"
+          required>
+          <span class="error user-name-error">Необходимо заполнить данное поле</span>
+        </label>
+        <label class="popup__input-container">
+          <input
+          type="text"
+          name="job"
+          id="user-job"
+          class="popup__input popup__input_type_job"
+          placeholder="О себе"
+          minlength="2"
+          maxlength="200"
+          required>
+          <span class="error user-job-error"></span>
+        </label>
         <button class="popup__submit-button popup__submit-button_edit" type="submit">Сохранить</button>
       </form>
     </div>
@@ -51,9 +71,29 @@
     <div class="popup__container">
       <button class="popup__close-button popup__close-button_type_add link" type="button" aria-label="Кнопка закрытия"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form class="popup__form popup__form_type_add" method="get" name="form">
-        <input type="text" name="place" class="popup__input popup__input_type_place" placeholder="Название">
-        <input type="text" name="link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
+      <form class="popup__form popup__form_type_add" name="place" novalidate>
+        <label class="popup__input-container">
+          <input
+          type="text"
+          name="place"
+          id="place-name"
+          class="popup__input popup__input_type_place"
+          placeholder="Название"
+          minlength="2"
+          maxlength="30"
+          required>
+          <span class="error place-name-error"></span>
+        </label>
+        <label class="popup__input-container">
+          <input
+          type="url"
+          name="link"
+          id="link"
+          class="popup__input popup__input_type_link"
+          placeholder="Ссылка на картинку"
+          required>
+          <span class="error link-error"></span>
+        </label>
         <button class="popup__submit-button popup__submit-button_add" type="submit">Создать</button>
       </form>
     </div>
@@ -70,7 +110,7 @@
 
   <template class="element-template">
     <li class="element">
-      <img class="element__image">
+      <img class="element__image" alt="#">
       <button class="element__trash-button link" type="button" aria-label="Кнопка удаления"></button>
       <div class="element__group">
         <h2 class="element__name"></h2>
@@ -79,5 +119,6 @@
     </li>
   </template>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
