@@ -65,12 +65,13 @@ const placeLinkInput = popupAddForm.querySelector('.popup__input_type_link');
 const openPopup = (popup) => {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEsc);
-  closePopupOverlay(popup);
+  popup.addEventListener('mousedown', closePopupOverlay);
 };
 
 const closePopup = (popup) => {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupEsc);
+  popup.removeEventListener('mousedown', closePopupOverlay);
 };
 
 const closePopupEsc = (evt) => {
@@ -80,12 +81,11 @@ const closePopupEsc = (evt) => {
   }
 };
 
-const closePopupOverlay = (popup) => {
-  popup.addEventListener('mousedown', (evt) => {
-    if (evt.target === popup && popup.classList.contains('popup_opened')) {
-      closePopup(popup);
-    }
-  });
+const closePopupOverlay = (evt) => {
+  if (evt.target === evt.currentTarget) {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
 };
 
 // edit popup actions
@@ -179,6 +179,8 @@ function submitAddPopupForm (evt) {
   evt.preventDefault();
   renderCard({name: placeInput.value, link: placeLinkInput.value}, cardsContainer);
   popupAddForm.reset();
+  popupAddSubmitButton.classList.add('popup__submit-button_disabled');
+  popupAddSubmitButton.setAttribute('disabled', true);
   closePopup(popupAdd);
 }
 
@@ -186,8 +188,8 @@ popupAddForm.addEventListener('submit', submitAddPopupForm);
 
 openedAddPopup.addEventListener('click', () => {
   openPopup(popupAdd);
-  popupAddSubmitButton.classList.add('popup__submit-button_disabled');
-  popupAddSubmitButton.setAttribute('disabled', true);
+  // popupAddSubmitButton.classList.add('popup__submit-button_disabled');
+  // popupAddSubmitButton.setAttribute('disabled', true);
 });
 closedAddPopup.addEventListener('click', () => {
   closePopup(popupAdd);

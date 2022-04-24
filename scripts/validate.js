@@ -1,3 +1,5 @@
+'use strict';
+
 const validationData = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
@@ -60,10 +62,6 @@ const setEventListeners = (formElement, config) => {
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
   formList.forEach((formElement) => {
-    formElement.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-    });
-
     setEventListeners(formElement, config);
   });
 };
